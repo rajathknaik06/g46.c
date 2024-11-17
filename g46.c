@@ -36,16 +36,17 @@ int main()
     int k = n;
     while (k != 0)
     {
-        int r = k % 10;
+        int r = k % 10;   //extract last digit
+        
         int fact = 1;
         for (int i = 1; i <= r; i++)
         {
             fact *= i;
         }
-        sum += fact;
-        k /= 10;
+        sum += fact;   //add factorial to sum
+        k /= 10;       //remove last digit
     }
-
+//check if the sum of factorials equals the original number
     if (sum == n)
     {
         printf("%d is a strong number", n);
